@@ -1,9 +1,10 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { cn } from '@/lib/utils';
+import { initAnimateOnScroll } from '@/lib/animations';
 
 // Gallery data
 const galleryImages = [
@@ -70,6 +71,11 @@ const categories = [
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = React.useState("all");
+
+  useEffect(() => {
+    const cleanup = initAnimateOnScroll();
+    return cleanup;
+  }, []);
 
   const filteredImages = activeCategory === "all" 
     ? galleryImages 

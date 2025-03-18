@@ -1,11 +1,17 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Button from '@/components/Button';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { initAnimateOnScroll } from '@/lib/animations';
 
 const Contact = () => {
+  useEffect(() => {
+    const cleanup = initAnimateOnScroll();
+    return cleanup;
+  }, []);
+  
   return (
     <div className="min-h-screen bg-dark text-foreground">
       <Header />

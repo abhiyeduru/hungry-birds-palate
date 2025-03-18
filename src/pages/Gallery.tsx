@@ -9,49 +9,49 @@ import { cn } from '@/lib/utils';
 const galleryImages = [
   {
     id: 1,
-    src: '/gallery1.jpg',
+    src: 'https://images.unsplash.com/photo-1514516345957-556ca7d90a29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     alt: 'Elegantly plated gourmet steak',
     category: 'Main Course',
   },
   {
     id: 2,
-    src: '/gallery2.jpg',
+    src: 'https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
     alt: 'Chef preparing a signature dish',
     category: 'Kitchen',
   },
   {
     id: 3,
-    src: '/gallery3.jpg',
+    src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     alt: 'Restaurant interior with ambient lighting',
     category: 'Ambiance',
   },
   {
     id: 4,
-    src: '/gallery4.jpg',
+    src: 'https://images.unsplash.com/photo-1599687267812-35c05ff70ee1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     alt: 'Seafood platter with fresh oysters',
     category: 'Seafood',
   },
   {
     id: 5,
-    src: '/gallery5.jpg',
+    src: 'https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1886&q=80',
     alt: 'Craft cocktail preparation',
     category: 'Beverages',
   },
   {
     id: 6,
-    src: '/gallery6.jpg',
+    src: 'https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80',
     alt: 'Perfectly grilled chicken with herbs',
     category: 'Main Course',
   },
   {
     id: 7,
-    src: '/gallery7.jpg',
+    src: 'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     alt: 'Private dining room setting',
     category: 'Ambiance',
   },
   {
     id: 8,
-    src: '/gallery8.jpg',
+    src: 'https://images.unsplash.com/photo-1579954115545-a95591f28bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     alt: 'Dessert presentation with chocolate garnish',
     category: 'Desserts',
   }

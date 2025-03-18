@@ -30,14 +30,14 @@ const About = () => {
           <div className="relative animate-on-scroll">
             <div className="aspect-square rounded-lg overflow-hidden">
               <img 
-                src="/about.jpg" 
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
                 alt="Restaurant interior" 
                 className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105"
               />
             </div>
             <div className="absolute -bottom-6 -left-6 w-1/2 aspect-square rounded-lg overflow-hidden border-4 border-dark-100 shadow-xl">
               <img 
-                src="/chef.jpg" 
+                src="https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" 
                 alt="Our chef preparing food" 
                 className="w-full h-full object-cover"
               />

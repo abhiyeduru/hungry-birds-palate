@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Link, useLocation } from 'react-router-dom';
@@ -101,6 +100,15 @@ const Header = () => {
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         )}
       >
+        {/* Add close button inside the mobile menu */}
+        <button 
+          className="absolute top-4 right-4 text-foreground hover:text-gold transition-colors" 
+          onClick={closeMobileMenu}
+          aria-label="Close menu"
+        >
+          <X size={24} />
+        </button>
+        
         <nav className="flex flex-col items-center space-y-6 p-6">
           <NavLink to="/" onClick={closeMobileMenu}>Home</NavLink>
           <NavLink to="/about" onClick={closeMobileMenu}>About Us</NavLink>
@@ -108,6 +116,7 @@ const Header = () => {
           <NavLink to="/reservations" onClick={closeMobileMenu}>Reservations</NavLink>
           <NavLink to="/gallery" onClick={closeMobileMenu}>Gallery</NavLink>
           <NavLink to="/contact" onClick={closeMobileMenu}>Contact</NavLink>
+          
           <Link to="/reservations" onClick={closeMobileMenu}>
             <Button className="mt-6">Book a Table</Button>
           </Link>

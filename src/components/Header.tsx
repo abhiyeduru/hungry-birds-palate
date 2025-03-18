@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
 
@@ -13,15 +13,25 @@ const NavLink = ({
   to: string; 
   children: React.ReactNode;
   onClick?: () => void;
-}) => (
-  <Link
-    to={to}
-    className="relative text-sm font-medium hover:text-gold transition-colors after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-gold after:transform after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100"
-    onClick={onClick}
-  >
-    {children}
-  </Link>
-);
+}) => {
+  const location = useLocation();
+  const isActive = location.pathname === to || 
+                  (location.pathname === '/' && to === '/') ||
+                  (location.pathname !== '/' && to !== '/' && location.pathname.startsWith(to));
+  
+  return (
+    <Link
+      to={to}
+      className={cn(
+        "relative text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-gold after:transform after:transition-transform after:duration-300 hover:after:scale-x-100",
+        isActive ? "text-gold after:scale-x-100" : "text-foreground hover:text-gold after:scale-x-0"
+      )}
+      onClick={onClick}
+    >
+      {children}
+    </Link>
+  );
+};
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -69,7 +79,9 @@ const Header = () => {
         </nav>
 
         <div className="hidden md:block">
-          <Button>Book a Table</Button>
+          <Link to="/reservations">
+            <Button>Book a Table</Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -96,7 +108,9 @@ const Header = () => {
           <NavLink to="/reservations" onClick={closeMobileMenu}>Reservations</NavLink>
           <NavLink to="/gallery" onClick={closeMobileMenu}>Gallery</NavLink>
           <NavLink to="/contact" onClick={closeMobileMenu}>Contact</NavLink>
-          <Button onClick={closeMobileMenu} className="mt-6">Book a Table</Button>
+          <Link to="/reservations" onClick={closeMobileMenu}>
+            <Button className="mt-6">Book a Table</Button>
+          </Link>
         </nav>
       </div>
     </header>
